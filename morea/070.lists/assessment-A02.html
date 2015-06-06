@@ -1,0 +1,39 @@
+<script src="/ics211javascript/js/Chart.js"></script>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="well">
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-A02"></canvas>
+      </div>
+     </div>
+  </div>
+
+  <div class="col-sm-6">
+    <p>This assessment will verify that students understand the basics of ArrayList implementation of the List interface, Big-O notation and Quadratic Sorting Algorithms.</p>
+
+  </div>
+
+  <script>
+
+    var moreaChartData = {
+      labels: ["Excellent", "Satisfactory", "Borderline", "Unsatisfactory"],
+      datasets: [ { data: [0, 0, 0, 0] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-A02").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
+  </script>
+
+
+</div>
